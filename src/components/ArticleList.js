@@ -1,12 +1,12 @@
-import React from 'react';
-import Article from './Article';
-import blogData from '../data/blog';
+import React from "react";
+import Article from "./Article";
+import blogData from "../data/blog";
 
 function ArticleList() {
   return (
     <main>
-      {blogData.posts.map((post) => (
-        <Article key={post.id} post={post} />
+      {blogData.posts.map((x) => (
+        <Article key={x.id} i={x} />
       ))}
     </main>
   );

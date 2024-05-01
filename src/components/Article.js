@@ -1,20 +1,20 @@
 import React from "react";
 
-function Article({ post }) {
+function Article({ i }) {
   const emojis =
-    post.minutes <= 6
-      ? '☕️'.repeat(Math.ceil(post.minutes / 5))
-      : '🍱'.repeat(Math.ceil(post.minutes / 10));
+    i.minutes <= 6
+      ? "☕️".repeat(Math.ceil(i.minutes / 5))
+      : "🍱".repeat(Math.ceil(i.minutes / 10));
 
-  const formattedDate = post.date || "January 1, 1970";
+  const formattedDate = i.date || "January 1, 1970";
 
   return (
     <article>
-      <h3>{post.title}</h3>
+      <h3>{i.title}</h3>
       <small>{formattedDate}</small>
-      <p>{post.preview}</p>
+      <p>{i.preview}</p>
       <p>
-        {emojis} {post.minutes} min read
+        {emojis} {i.minutes} min read
       </p>
     </article>
   );
